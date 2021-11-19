@@ -4,3 +4,17 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.p-b-1 {
+    padding-bottom: 1rem;
+}
+

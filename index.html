@@ -13,12 +13,21 @@
 <body>
     
     <div id="app">
-        <h2>Email list:</h2>
-        <ul>
-            <li>
+        <div class="container">
+            <h1 class="p-b-1">Random Email list generator</h1>
+        <h2 class="p-b-1">Email list:</h2>
+        <ul 
+        v-if="emails.length === 10">
+            <li  
+            v-for="email in emails">
                 {{ email }}
             </li>
         </ul>
+        <h2 
+        v-else>
+            LOADING...
+        </h2>
+        </div>
     </div>
 
 <!-- AXIOS -->

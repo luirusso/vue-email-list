@@ -12,22 +12,22 @@ const app = new Vue({
     el: '#app',
     data: {
         apiURL: 'https://flynn.boolean.careers/exercises/api/random/mail',
-        email: '',
+        emails: [],
     },
     created() {
         this.getEmail();
     },
     methods: {
         getEmail() {
-            do {
+            for(i = 0; i < 10; i++) {
                 axios.get(this.apiURL).then( response => {
                     console.log(response);
-                    this.email += response.data.response;
+                    this.emails.push(response.data.response);
                 })
                 .catch(error => {
                     console.log(error);
                 })
-            } while (this.email.length < 10);
+            }
         }
     },
 }); 
